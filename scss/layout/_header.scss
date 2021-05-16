@@ -5,6 +5,10 @@ header {
     right: 0;
     z-index: 1;
     padding-top: 30px;
+    transition: padding-top 0.2s ease-in-out;
+    &.closed{
+        padding-top: 5px;
+    }
     .row{
         justify-content: space-between;
         align-items: center;

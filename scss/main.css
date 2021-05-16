@@ -5039,6 +5039,12 @@ header {
   right: 0;
   z-index: 1;
   padding-top: 30px;
+  -webkit-transition: padding-top 0.2s ease-in-out;
+  transition: padding-top 0.2s ease-in-out;
+}
+
+header.closed {
+  padding-top: 5px;
 }
 
 header .row {
