@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: Roboto;
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url('../fonts/Roboto-Regular.ttf');
 }
 
 
@@ -28,6 +28,7 @@ h3{
     font-weight: bold;
 }
 p{
+    font-size: rem(18px);
     line-height: 150%;
 }
 

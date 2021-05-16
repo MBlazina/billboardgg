@@ -11,117 +11,105 @@
     <title>Project</title>
 </head>
 
-<body class="scroll">
-    <div id="main">
-        <header class="container-fluid">
-            <div class="row">
-                <div class="col-6"><img class="logo" src="assets/logo.svg" alt="logo"></div>
-                <div class="col-6"><a href="#" class="cta icon icon-wallet ms-auto">LOGIN WITH WALLET</a></div>
-            </div>
-        </header>
-        <div class="wrapper d-flex flex-column m-auto">
-            <!-- MAIN CONSTENT -->
-            <div class="slick flex-grow-1 position-relative">
-                <section class="intro">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-5 offset-md-1">
-                                <h1 class="color-white">Welcome to Billboard.GG</h1>
-                                <p class="color-white">Sell <span class="color-blue">in-game advertisment space</span> and bootstrap your game</p>
-                                <a href="#" class="cta icon icon-discord">JOIN OUR DISCORD</a>
-                                <!-- <button class="cta icon icon-discord">JOIN OUR DISCORD</button> -->
-                            </div>
-                        </div>
-                    </div>
+<body>
 
-                </section>
-                <section>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">section 2</div>
-                            <div class="col">section 2</div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">section 3</div>
-                            <div class="col">section 3</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-3"><img class="logo" src="assets/logo.svg" alt="logo"></div>
+            <div class="col-9"><a href="#" class="cta icon icon-wallet ms-auto">LOGIN WITH WALLET</a></div>
         </div>
+    </header>
+    <div class="wrapper">
+        <!-- MAIN CONTENT -->
+        <div class="slick ">
+            <section class="intro background-black text-white background-right">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1">
+                            <h1 class="mb-30">Welcome to Billboard.GG</h1>
+                            <p class="mb-30">Sell <span class="text-blue">in-game advertisment space</span> and
+                                bootstrap your game</p>
+                            <a href="#" class="cta icon icon-discord">JOIN OUR DISCORD</a>
+                            <!-- <button class="cta icon icon-discord">JOIN OUR DISCORD</button> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 offset-md-1"><div class="icon-funding">$BB</div></div>
+                        <div class="col-4">
+                            <p class="text-white">
+                                Community governed virtual world advertisment and funding DAO. Fund the projects you believe in and earn profits from future in game advertising real-estate
+                            </p>
+                        </div>
 
-        <!-- NAVIGATION -->
-        <nav class="container-fluid d-flex justify-content-center align-items-end flex-column">
-            <div class="slick-prev">prev</div>
-            <div class="slick-vertical-dots"></div>
-            <div class="slick-next">next</div>
-        </nav>
-        <footer>FOOTER</footer>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="community background-black background-left text-white">
+                <div class="container-fluid">
+                    <div class="row mb-70">
+                        <div class="col col-md-6 offset-md-5">
+                            <h2>Democratize virtual advertising and join our decentralized community</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-70">
+                        <div class="col col-md-3 offset-md-5">
+                            <h3 class="mb-25">Developers</h3>
+                            <p>Game developers can crowdfund and finance the game development in a more natural way by selling real estate that will get created. </p>
+                        </div>
+                        <div class="col col-md-3">
+                            <h3 class="mb-25">Gamers</h3>
+                            <p>Game developers can crowdfund and finance the game development in a more natural way by selling real estate that will get created.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-3 offset-md-5">
+                            <h3 class="mb-25">Advertisers</h3>
+                            <p>Game developers can crowdfund and finance the game development in a more natural way by selling real estate that will get created. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">section 3</div>
+                        <div class="col">section 3</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="container-fluid">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-4"><img class="logo" src="assets/logo.svg" alt="logo"></div>
+                <div class="col-8">
+                    <ul class="footer-nav d-flex justify-content-between align-items-center">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Join the community</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Cookie information</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <script type="text/javascript" src="script/jquery-slim.min.js"></script>
+    <!-- NAVIGATION -->
+    <nav class="container-fluid d-flex justify-content-center align-items-end flex-column">
+        <div class="slick-prev">prev</div>
+        <div class="slick-vertical-dots"></div>
+        <div class="slick-next">next</div>
+    </nav>
+
+    <!-- <script type="text/javascript" src="script/jquery-slim.min.js"></script> -->
+    <script type="text/javascript" src="script/jquery.min.js"></script>
     <script type="text/javascript" src="script/slick.min.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
 
-    <!-- INIT SLICK -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.slick').slick({
-                slide: 'section',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                vertical: true,
-                arrows: true,
-                prevArrow: $('.slick-prev'),
-                nextArrow: $('.slick-next'),
-                dots: true,
-                appendDots: $('.slick-vertical-dots'),
-                infinite: false,
-                draggable: false,
-                userSelect: true,
-            });
-
-
-            /* 
-                        const prevBtn = document.querySelector('.prev-button');
-                        console.log(prevBtn)
-                        const slider = document.querySelector('.slick');
-                        const nav = document.querySelector('.vertical-dots');
-            
-                        prevBtn.addEventListener('click', function () {
-                            slider.slick("slickNext")
-                        })
-                        console.log(nav)
-                        slider.insertBefore(prevBtn, nav); */
-            /* const nav = document.querySelector('.vertical-dots');
-            
-            const firstLi = nav.querySelector('li:first-child');
-            const lastLi = nav.querySelector('li:last-child'); */
-
-            /* const prev = document.querySelector('.slick-prev');
-            prev.addEventListener('click', function(e){
-                
-            })
-            nav.querySelector('li:first-child').addEventListener('click', function(e){
-                console.log(e)
-            })
-            prev.setAttribute('aria-controls',"disabled");
-            const next = document.querySelector('.slick-next');
-            //$(nav).append($('.slick-prev'))
-            //console.log(prev)
-
-            nav.insertBefore(prev, firstLi) */
-            //nav.appendChild(prev)
-            //nav.parentNode.insertBefore(next, lastLi.nextSibling);
-            /* nav.appendChild(prev);
-            nav.appendChild(next) */
-        });
-    </script>
 </body>
 
 </html>

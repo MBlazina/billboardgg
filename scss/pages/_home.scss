@@ -1,11 +1,41 @@
 body{
     background-color: $color-black;
 }
+.icon-funding{
+    background: $color-white;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(36px);
+    font-weight: bold;
+    color: $color-black;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+    &:hover{
+        transform: rotate(-5deg);
+    }
+}
 /* SECTIONS */
+.wrapper section{
+    background-repeat: no-repeat;
+    background-size: contain;
+    &.background-left{
+        background-position: left;
+    }
+    &.background-right{
+        background-position: right;
+    }
+}
 .intro {
     background-image: url('../../assets/background-intro.jpg');
-    background-repeat: no-repeat;
-    background-position: right ;
-    background-size: contain;
-    background-color: $color-black;
+    .cta{
+        margin-bottom: 165px ;
+    }
 }
+.community {
+    background-image: url('../../assets/background-community.jpg');
+}
+

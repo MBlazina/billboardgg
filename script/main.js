@@ -1,85 +1,58 @@
-const slider = $(".slick");
+let page = $('.wrapper');
+let slider = $('.slick');
+let pageEnd = false;
 
-//document.addEventListener('scroll', throttle(detectScroll, 0));
-
-//Throttle function
-/* function throttle(func, timeFrame) {
-    var lastTime = 0;
-    return function () {
-        var now = new Date();
-        if (now - lastTime >= timeFrame) {
-            func();
-            lastTime = now;
-        }
-    };
-} */
-
-//Slider navigation on scroll
-slider.on('afterChange', function (event, slick, currentSlide) {
-    let body = document.body.classList;
-    const header = document.querySelector('header');
-    var sumSlides = slick.$slides.length - 1;
-    if (sumSlides == currentSlide) {
-        body.add('slide-last');
-        body.remove('scroll')
-    }
-    if(currentSlide == 1 ){
-        header.classList.add('closed')
-    }else if (currentSlide == 0){
-        header.classList.remove('closed')
-    }
-
+slider.slick({
+    vertical: true,
+    verticalSwiping: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: false,
+    slide: 'section',
+    arrows: true,
+    prevArrow: $('.slick-prev'),
+    nextArrow: $('.slick-next'),
+    dots: true,
+    appendDots: $('.slick-vertical-dots'),
 });
 
-var scrollCount = null;
-var scroll= null;
-slider.on('wheel', (function (e) {
-    let wrappSize = document.querySelector('.wrapper').getBoundingClientRect().height;
-    console.log($('.slick').slick)
-    if(wrappSize > 1900){
-        console.log("double wrapper")
-        
+slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    console.log(currentSlide);
+    const header = document.querySelector('header');
+    if (currentSlide == slick.slideCount - 1 && !pageEnd) {
+        pageEnd = true;
     }
-    console.log(wrappSize)
-    const body = document.body.classList;
-    //console.log(window.pageYOffset)
-    if (body.contains('scroll')) {
-        e.preventDefault();
-
-        clearTimeout(scroll);
-    scroll = setTimeout(function(){scrollCount=0;}, 200);
-    if(scrollCount) return 0;
-    scrollCount=1;
-
-        if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickPrev');
-        } else {
-            $(this).slick('slickNext');
-        }
-    } else if (body.contains('slide-last') && body.contains('footer-closed')) {
-        if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickPrev');
-            body.remove('footer-closed');
-            body.remove('slide-last')
-            body.add('scroll')
-        } else {
-            body.remove('footer-closed');
-        }
+    if(currentSlide !== slick.slideCount - 1 && pageEnd){
+        pageEnd = false;
+        page.animate({ "top": "0px" }, "normal");
     }
-    let endScroll = (window.innerHeight + window.scrollY) >= document.body.scrollHeight;
-    if (body.contains('slide-last') && endScroll) {
-        if (e.originalEvent.deltaY < 0) {
-            body.add('footer-closed')
-        } else {
-        }
-    } else if (body.contains('slide-last') && !body.contains('scroll') && !endScroll) {
-        if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickPrev');
-            body.remove('slide-last')
-            body.add('scroll')
-        }
+    if(currentSlide == 1){
+        header.classList.add('closed')
+    }else if(currentSlide == 0){
+        header.classList.remove('closed')
     }
-}));
+});
 
-
-
+page.on('wheel', function (e) {
+    console.log("start", pageEnd);
+    e.preventDefault();
+    if (e.originalEvent.deltaY < 0) {
+        if (pageEnd) {
+            page.clearQueue();
+            page.animate({ "top": "0px" }, "normal");
+            pageEnd = false;
+            console.log("end", pageEnd);
+            return;
+        }
+        slider.slick('slickPrev');
+    } else {
+        if (pageEnd) {
+            page.clearQueue();
+            page.animate({ "top": "-" + $('footer').height() + "px" }, "normal");
+            console.log("end", pageEnd);
+            return;
+        }
+        slider.slick('slickNext');
+    }
+    console.log("end", pageEnd);
+});
