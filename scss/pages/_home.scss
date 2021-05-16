@@ -38,4 +38,41 @@ body{
 .community {
     background-image: url('../../assets/background-community.jpg');
 }
+.development{
+    background-image: url('../../assets/background-development.jpg');
+}
+.about{
+    h2{
+        text-align: center;
+    }
+    .infographic-container{
+        position: relative;
+        .text-bubble{
+            &.sell{
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &.virtual{
+                top: 5%;
+                left: 15%
+            }
+            &.transparent{
+                bottom: 0;
+                left: 15%
+            }
+            &.sdk{
+                right: 0;
+                bottom: 0;
+            }
+            &.auction{
+                top: 20%;
+                right: 5%;
+            }
+        }
+    }
+    .text-bubble {
+        position: absolute;
+    }
+}
+
 
