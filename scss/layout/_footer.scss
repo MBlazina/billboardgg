@@ -1,5 +1,19 @@
 footer {
-    background-color: black;
-    color: white;
-    height: 200px;
+    background-color: $color-black;
+    color: $color-white;
+    height: 155px;
+    >.row{
+        height: 100%;
+    }
+    .footer-nav {
+        list-style: none;
+        width: 100%;
+        li > a{
+            color: $color-white;
+            text-decoration: none;
+            &:hover{
+                color: $color-blue;
+            }
+        }
+    }
 }
