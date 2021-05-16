@@ -31,4 +31,22 @@ p{
     font-size: rem(18px);
     line-height: 150%;
 }
+.text-bubble{
+    display: inline-flex;
+    flex-direction: column;
+    background: $color-white;
+    padding: 15px 20px;
+    width: auto;
+    border-radius: 12px;
+    line-height: rem(20px);
+    &::before {
+        content: "";
+        display: block;
+        margin-bottom: 7px;
+        width: 73px;
+        height: 1px;
+        background-color: $color-blue;
+        border: 1px solid $color-blue;
+    }
+}
 

@@ -15,6 +15,10 @@
   background-color: #FEFDFC;
 }
 
+.background-grey {
+  background-color: #BBBBBB;
+}
+
 /*!
  * Bootstrap Grid v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -4832,6 +4836,11 @@
           box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: Roboto;
   src: url("../fonts/Roboto-Regular.ttf");
@@ -4866,6 +4875,31 @@ h3 {
 p {
   font-size: 1.125rem;
   line-height: 150%;
+}
+
+.text-bubble {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FEFDFC;
+  padding: 15px 20px;
+  width: auto;
+  border-radius: 12px;
+  line-height: 1.25rem;
+}
+
+.text-bubble::before {
+  content: "";
+  display: block;
+  margin-bottom: 7px;
+  width: 73px;
+  height: 1px;
+  background-color: #1283EB;
+  border: 1px solid #1283EB;
 }
 
 nav {
@@ -5254,5 +5288,47 @@ body {
 
 .community {
   background-image: url("../../assets/background-community.jpg");
+}
+
+.development {
+  background-image: url("../../assets/background-development.jpg");
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.about .infographic-container {
+  position: relative;
+}
+
+.about .infographic-container .text-bubble.sell {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.about .infographic-container .text-bubble.virtual {
+  top: 5%;
+  left: 15%;
+}
+
+.about .infographic-container .text-bubble.transparent {
+  bottom: 0;
+  left: 15%;
+}
+
+.about .infographic-container .text-bubble.sdk {
+  right: 0;
+  bottom: 0;
+}
+
+.about .infographic-container .text-bubble.auction {
+  top: 20%;
+  right: 5%;
+}
+
+.about .text-bubble {
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */
