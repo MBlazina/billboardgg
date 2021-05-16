@@ -4,11 +4,9 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
+    padding-top: 30px;
     .row{
         justify-content: space-between;
         align-items: center;
-    }
-    &.hide {
-        background: red;
     }
 }

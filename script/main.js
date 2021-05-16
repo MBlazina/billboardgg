@@ -50,8 +50,11 @@ slider.on('wheel', (function (e) {
             body.add('footer-closed')
         } else {
         }
-    } else if (body.contains('slide-last') && body.contains('scroll') && !endScroll) {
-        if (e.originalEvent.deltaY > 0) {
+    } else if (body.contains('slide-last') && !body.contains('scroll') && !endScroll) {
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickPrev');
+            body.remove('slide-last')
+            body.add('scroll')
         }
     }
 }));
