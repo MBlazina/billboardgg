@@ -19,9 +19,9 @@
                 <div class="col-6"><a href="#" class="cta icon icon-wallet ms-auto">LOGIN WITH WALLET</a></div>
             </div>
         </header>
-        <div class="wrapper d-flex flex-column m-auto">
+        <div class="wrapper">
             <!-- MAIN CONSTENT -->
-            <div class="slick flex-grow-1 position-relative">
+            <div class="slick ">
                 <section class="intro">
                     <div class="container-fluid">
                         <div class="row">
@@ -52,7 +52,7 @@
                     </div>
                 </section>
             </div>
-
+            <footer>FOOTER</footer>
         </div>
 
         <!-- NAVIGATION -->
@@ -61,16 +61,17 @@
             <div class="slick-vertical-dots"></div>
             <div class="slick-next">next</div>
         </nav>
-        <footer>FOOTER</footer>
+        
     </div>
 
-    <script type="text/javascript" src="script/jquery-slim.min.js"></script>
+    <!-- <script type="text/javascript" src="script/jquery-slim.min.js"></script> -->
+    <script type="text/javascript" src="script/jquery.min.js"></script>
     <script type="text/javascript" src="script/slick.min.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
 
     <!-- INIT SLICK -->
     <script type="text/javascript">
-        $(document).ready(function () {
+        /* $(document).ready(function () {
             $('.slick').slick({
                 slide: 'section',
                 slidesToShow: 1,
@@ -85,42 +86,7 @@
                 draggable: false,
                 userSelect: true,
             });
-
-
-            /* 
-                        const prevBtn = document.querySelector('.prev-button');
-                        console.log(prevBtn)
-                        const slider = document.querySelector('.slick');
-                        const nav = document.querySelector('.vertical-dots');
-            
-                        prevBtn.addEventListener('click', function () {
-                            slider.slick("slickNext")
-                        })
-                        console.log(nav)
-                        slider.insertBefore(prevBtn, nav); */
-            /* const nav = document.querySelector('.vertical-dots');
-            
-            const firstLi = nav.querySelector('li:first-child');
-            const lastLi = nav.querySelector('li:last-child'); */
-
-            /* const prev = document.querySelector('.slick-prev');
-            prev.addEventListener('click', function(e){
-                
-            })
-            nav.querySelector('li:first-child').addEventListener('click', function(e){
-                console.log(e)
-            })
-            prev.setAttribute('aria-controls',"disabled");
-            const next = document.querySelector('.slick-next');
-            //$(nav).append($('.slick-prev'))
-            //console.log(prev)
-
-            nav.insertBefore(prev, firstLi) */
-            //nav.appendChild(prev)
-            //nav.parentNode.insertBefore(next, lastLi.nextSibling);
-            /* nav.appendChild(prev);
-            nav.appendChild(next) */
-        });
+        }); */
     </script>
 </body>
 
