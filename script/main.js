@@ -17,7 +17,7 @@ slider.slick({
 });
 
 slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    console.log(currentSlide);
+    /* console.log(currentSlide); */
     const header = document.querySelector('header');
     if (currentSlide == slick.slideCount - 1 && !pageEnd) {
         pageEnd = true;
@@ -34,14 +34,14 @@ slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
 });
 
 page.on('wheel', function (e) {
-    console.log("start", pageEnd);
+    /* console.log("start", pageEnd); */
     e.preventDefault();
     if (e.originalEvent.deltaY < 0) {
         if (pageEnd) {
             page.clearQueue();
             page.animate({ "top": "0px" }, "normal");
             pageEnd = false;
-            console.log("end", pageEnd);
+            /* console.log("end", pageEnd); */
             return;
         }
         slider.slick('slickPrev');
@@ -49,10 +49,10 @@ page.on('wheel', function (e) {
         if (pageEnd) {
             page.clearQueue();
             page.animate({ "top": "-" + $('footer').height() + "px" }, "normal");
-            console.log("end", pageEnd);
+            /* console.log("end", pageEnd); */
             return;
         }
         slider.slick('slickNext');
     }
-    console.log("end", pageEnd);
+    /* console.log("end", pageEnd); */
 });

@@ -50,6 +50,7 @@ body{
         .text-bubble{
             &.sell{
                 top: 50%;
+                left: 0;
                 transform: translateY(-50%);
             }
             &.virtual{
@@ -74,5 +75,45 @@ body{
         position: absolute;
     }
 }
-
+section{
+    h2{
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out 0.3s, transform 0.3s ease-in-out 0.3s;
+    }
+    p,
+    h3{
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out 0.5s;
+    }
+    &.background-left{
+        h2{
+            transform: translateX(20%);
+        }
+    }
+    &.background-right{
+        h2{
+            transform: translateX(-20%);
+        }
+    }
+    &.slick-active{
+        h2{
+            transform: translateX(0);
+        }
+        p,
+        h3{
+            opacity: 1;
+        }
+    }
+}
+h2{
+    
+    
+    
+}
+.slick-active{
+    h2{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
