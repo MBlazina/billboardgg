@@ -1,0 +1,11 @@
+body{
+    background-color: $color-black;
+}
+/* SECTIONS */
+.intro {
+    background-image: url('../../assets/background-intro.jpg');
+    background-repeat: no-repeat;
+    background-position: right ;
+    background-size: contain;
+    background-color: $color-black;
+}

@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+}
+.container-fluid {
+    max-width: 1690px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#main {
+    
+    min-height: 100vh;
+    .wrapper,
+    .slick-list,
+    .slick-track,
+    .slick-slide {
+        min-height: 100vh;
+    }
+}
+.wrapper {
+    max-width: 1920px;
+}
+
+section {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: lightblue;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Project</title>
+</head>
+
+<body class="scroll">
+    <div id="main">
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-6"><img class="logo" src="assets/logo.svg" alt="logo"></div>
+                <div class="col-6"><a href="#" class="cta icon icon-wallet ms-auto">LOGIN WITH WALLET</a></div>
+            </div>
+        </header>
+        <div class="wrapper d-flex flex-column m-auto">
+            <!-- MAIN CONSTENT -->
+            <div class="slick flex-grow-1 position-relative">
+                <section class="intro">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5 offset-md-1">
+                                <h1 class="color-white">Welcome to Billboard.GG</h1>
+                                <p class="color-white">Sell <span class="color-blue">in-game advertisment space</span> and bootstrap your game</p>
+                                <a href="#" class="cta icon icon-discord">JOIN OUR DISCORD</a>
+                                <!-- <button class="cta icon icon-discord">JOIN OUR DISCORD</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">section 2</div>
+                            <div class="col">section 2</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">section 3</div>
+                            <div class="col">section 3</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="container-fluid d-flex justify-content-center align-items-end flex-column">
+            <div class="slick-prev">prev</div>
+            <div class="slick-vertical-dots"></div>
+            <div class="slick-next">next</div>
+        </nav>
+        <footer>FOOTER</footer>
+    </div>
+
+    <script type="text/javascript" src="script/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="script/slick.min.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+
+    <!-- INIT SLICK -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slick').slick({
+                slide: 'section',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: true,
+                arrows: true,
+                prevArrow: $('.slick-prev'),
+                nextArrow: $('.slick-next'),
+                dots: true,
+                appendDots: $('.slick-vertical-dots'),
+                infinite: false,
+                draggable: false,
+                userSelect: true,
+            });
+
+
+            /* 
+                        const prevBtn = document.querySelector('.prev-button');
+                        console.log(prevBtn)
+                        const slider = document.querySelector('.slick');
+                        const nav = document.querySelector('.vertical-dots');
+            
+                        prevBtn.addEventListener('click', function () {
+                            slider.slick("slickNext")
+                        })
+                        console.log(nav)
+                        slider.insertBefore(prevBtn, nav); */
+            /* const nav = document.querySelector('.vertical-dots');
+            
+            const firstLi = nav.querySelector('li:first-child');
+            const lastLi = nav.querySelector('li:last-child'); */
+
+            /* const prev = document.querySelector('.slick-prev');
+            prev.addEventListener('click', function(e){
+                
+            })
+            nav.querySelector('li:first-child').addEventListener('click', function(e){
+                console.log(e)
+            })
+            prev.setAttribute('aria-controls',"disabled");
+            const next = document.querySelector('.slick-next');
+            //$(nav).append($('.slick-prev'))
+            //console.log(prev)
+
+            nav.insertBefore(prev, firstLi) */
+            //nav.appendChild(prev)
+            //nav.parentNode.insertBefore(next, lastLi.nextSibling);
+            /* nav.appendChild(prev);
+            nav.appendChild(next) */
+        });
+    </script>
+</body>
+
+</html>

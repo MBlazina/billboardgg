@@ -1,0 +1,46 @@
+a,
+button{
+    &.cta{
+        cursor: pointer;
+        color: $color-white;
+        font-size: rem(14px);
+        line-height: 150%;
+        font-weight: bold;
+        text-decoration: none;
+        background: $color-blue;
+        border: none;
+        display: inline-flex;
+        border-radius: 30px;
+        width: 200px;
+        min-height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.icon{
+            &::before{
+                content:"";
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+            &.icon-discord{
+                &::before{
+                        background-image: url('../../assets/icon-discord.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 100%;
+                }
+            }
+            &.icon-wallet{
+                &::before{
+                        background-image: url('../../assets/icon-wallet.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 100%;
+                }
+            }
+        }
+        
+    }
+}

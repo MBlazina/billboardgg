@@ -1,0 +1,89 @@
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    .slick-dots {
+        padding: 0;
+    }
+    .slick-vertical-dots li {
+        position: relative;
+        padding: 0;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 0;
+        margin: 10px 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            border: none;
+            background: none;
+            font-size: 0;
+            &:hover {
+                &::before {
+                    transform: scale(1.8);
+                }
+            }
+            &::before {
+                content: "";
+                background: #fefdfc;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                display: block;
+                transform: scale(1);
+                transition: transform 0.2s ease-out;
+            }
+        }
+        &.slick-active {
+            button {
+                &::before {
+                    transform: scale(1.8);
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        content: url(../assets/chevron-white.svg);
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        line-height: 0;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        &.slick-disabled {
+            opacity: 0.8;
+        }
+        &.slick-prev {
+            &:hover {
+                transform: scale(1.5);
+            }
+            &.slick-disabled {
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+        &.slick-next {
+            transform: rotate(180deg);
+            &:hover {
+                transform: rotate(180deg) scale(1.5);
+            }
+            &.slick-disabled {
+                &:hover {
+                    transform: rotate(180deg) scale(1);
+                }
+            }
+        }
+    }
+}
