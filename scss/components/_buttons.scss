@@ -3,7 +3,10 @@ button{
     &.cta{
         cursor: pointer;
         color: $color-white;
-        font-size: rem(14px);
+        font-size: rem(12px);
+        @include min-dt {
+            font-size: rem(14px);
+        }
         line-height: 150%;
         font-weight: bold;
         text-decoration: none;
@@ -16,6 +19,7 @@ button{
         display: flex;
         justify-content: center;
         align-items: center;
+
         &.icon{
             &::before{
                 content:"";

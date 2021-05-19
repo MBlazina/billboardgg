@@ -15,21 +15,33 @@ button{
 }
 
 h1{
-    font-size: rem(109px);
+    font-size: rem(50px);
     font-weight: bold;
     line-height: 1;
+
+    @include min-dt {
+        font-size: rem(109px);
+    }
 }
 h2{
-    font-size: rem(61px);
+    font-size: rem(30px);
     font-weight: bold;
+
+    @include min-dt{
+        font-size: rem(61px);
+    }
 }
 h3{
     font-size: rem(24px);
     font-weight: bold;
 }
 p{
-    font-size: rem(18px);
+    font-size: rem(16px);
     line-height: 150%;
+
+    @include min-dt {
+        font-size: rem(18px);
+    }
 }
 .text-bubble{
     display: inline-flex;

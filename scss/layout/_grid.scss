@@ -31,6 +31,7 @@ body {
     section {
       width: 100%;
       height: 100vh;
+      
       position: relative;
       position: relative;
     }
@@ -44,6 +45,9 @@ body {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    >.container-fluid {
+        padding-right: 30px;
+    }
 }
 
 /* MARGINS */

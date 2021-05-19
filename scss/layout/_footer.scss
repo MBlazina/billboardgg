@@ -1,13 +1,26 @@
 footer {
     background-color: $color-black;
     color: $color-white;
-    height: 155px;
+    min-height: 155px;
+    padding:15px;
     >.row{
-        height: 100%;
+        height: 100%!important;
+    }
+    .logo{
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include min-dt {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
     .footer-nav {
         list-style: none;
         width: 100%;
+        li {
+            padding: 0 20px;
+        }
         li > a{
             color: $color-white;
             text-decoration: none;

@@ -13,3 +13,12 @@
 .background-grey{
     background-color: $color-grey;
 }
+
+// custom mixins
+$break-dt-min: 992px;
+
+@mixin min-dt {
+    @media (min-width: $break-dt-min) {
+        @content;
+    }
+}

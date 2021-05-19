@@ -4,10 +4,17 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    padding-top: 30px;
-    transition: padding-top 0.2s ease-in-out;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include min-dt {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
     &.closed{
-        padding-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: $color-black;
     }
     .row{
         justify-content: space-between;
