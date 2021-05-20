@@ -24,16 +24,22 @@ h1{
     }
 }
 h2{
-    font-size: rem(30px);
+    font-size: rem(25px);
     font-weight: bold;
-
+    text-align: center;
+    margin-bottom: 40px;
     @include min-dt{
         font-size: rem(61px);
+        text-align: left;
     }
 }
 h3{
-    font-size: rem(24px);
+    font-size: rem(20px);
     font-weight: bold;
+    
+    @include min-dt{
+        font-size: rem(24px);
+    }
 }
 p{
     font-size: rem(16px);

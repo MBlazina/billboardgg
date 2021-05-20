@@ -38,24 +38,40 @@ body{
         background-size: contain;
     }
     &.background-left{
-        background-position: left;
+        background-position: right;
+        @include min-dt {
+            background-position: left;
+        }
     }
     &.background-right{
-        background-position: right;
+        background-position: left;
+        @include min-dt {
+            background-position: right;
+        }
     }
 }
 .intro {
     background-image: url('../../assets/background-intro.jpg');
     .cta{
-        margin-bottom: 30px ;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
 
         @include min-dt {
             margin-bottom: 165px;
+            margin-left: 0;
+        margin-right: auto;
         }
     }
 }
 .community {
     background-image: url('../../assets/background-community.jpg');
+    .row.mb-70 {
+        margin-bottom: 0;
+    }
+    h3{
+        margin-bottom: 0;
+    }
 }
 .development{
     background-image: url('../../assets/background-development.jpg');
@@ -93,6 +109,45 @@ body{
     .text-bubble {
         position: absolute;
     }
+}
+.join {
+   
+    .background-image-hand{
+        position: absolute;
+       bottom: 0;
+       right: 0;
+       max-width: 60%;
+        @include min-dt{
+           
+            
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 40%;
+
+        }
+    }
+    background: linear-gradient(233deg, #1283eb, #191919);
+    background-size: 400% 400%;
+
+    -webkit-animation: GradientAnimation 0s ease infinite;
+    -moz-animation: GradientAnimation 0s ease infinite;
+    animation: GradientAnimation 0s ease infinite;
+}
+
+@-webkit-keyframes GradientAnimation {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
+}
+@-moz-keyframes GradientAnimation {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
+}
+@keyframes GradientAnimation {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
 }
 section{
     h2{

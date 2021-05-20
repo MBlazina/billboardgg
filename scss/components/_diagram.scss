@@ -1,0 +1,39 @@
+.diagram{
+    .arrow{
+        background-image: url(../../assets/diagram-arrow.svg);
+        flex: 1;
+        background-position: right;
+        margin: 5px;
+        @include min-dt {
+            margin: 30px;
+        }
+        &.left{
+            transform: rotate(180deg);
+        }
+    }
+    img{
+        width: 80px;
+        margin: 0;
+         @include min-dt {
+             width: 186px;
+         }
+    }
+}
+.diagram-first-row{
+    display: flex;
+}
+.diagram-icon-container {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: $color-white;
+        margin-bottom: 15px;
+        &.icon-title{
+            font-weight: bold;
+            color: $color-blue;
+        }
+    }
+}

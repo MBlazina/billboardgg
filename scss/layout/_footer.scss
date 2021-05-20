@@ -3,6 +3,9 @@ footer {
     color: $color-white;
     min-height: 155px;
     padding:15px;
+    @include min-dt {
+        padding: 0;
+    }
     >.row{
         height: 100%!important;
     }

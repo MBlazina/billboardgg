@@ -1,7 +1,7 @@
 let page = $('.wrapper');
 let slider = $('.slick');
 let pageEnd = false;
-
+const nav = document.querySelector('nav');
 slider.slick({
     vertical: true,
     verticalSwiping: true,
@@ -16,8 +16,21 @@ slider.slick({
     appendDots: $('.slick-vertical-dots'),
 });
 
+slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    //console.log('next: ' + nextSlide)
+});
+
 slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
     /* console.log(currentSlide); */
+    if(slick.$slides[currentSlide].classList.contains('nav-black')){
+        if(!nav.classList.contains('nav-black')){
+            nav.classList.add('nav-black')
+        }
+    }else{
+        if(nav.classList.contains('nav-black')){
+            nav.classList.remove('nav-black')
+        }
+    }
     const header = document.querySelector('header');
     if (currentSlide == slick.slideCount - 1 && !pageEnd) {
         pageEnd = true;
@@ -31,6 +44,7 @@ slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
     }else if(currentSlide == 0){
         header.classList.remove('closed')
     }
+    console.log(slick.$slides[currentSlide].classList)
 });
 
 page.on('wheel', function (e) {

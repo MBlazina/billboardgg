@@ -87,4 +87,12 @@ nav {
             }
         }
     }
+    &.nav-black{
+        .slick-vertical-dots li button::before {
+            background: $color-black;
+        }
+        .slick-arrow{
+            content: url(../assets/chevron-black.svg);
+        }
+    }
 }

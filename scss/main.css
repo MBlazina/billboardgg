@@ -11367,19 +11367,28 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.5625rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 992px) {
   h2 {
     font-size: 3.8125rem;
+    text-align: left;
   }
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 p {
@@ -11536,6 +11545,14 @@ nav .slick-arrow.slick-next.slick-disabled:hover {
           transform: rotate(180deg) scale(1);
 }
 
+nav.nav-black .slick-vertical-dots li button::before {
+  background: #191919;
+}
+
+nav.nav-black .slick-arrow {
+  content: url(../assets/chevron-black.svg);
+}
+
 html,
 body {
   height: 100%;
@@ -11625,7 +11642,13 @@ section > .container-fluid {
 }
 
 .mb-70 {
-  margin-bottom: 70px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 992px) {
+  .mb-70 {
+    margin-bottom: 70px;
+  }
 }
 
 header {
@@ -11650,7 +11673,7 @@ header {
 header.closed {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.8);
 }
 
 header .row {
@@ -11667,6 +11690,12 @@ footer {
   color: #FEFDFC;
   min-height: 155px;
   padding: 15px;
+}
+
+@media (min-width: 992px) {
+  footer {
+    padding: 0;
+  }
 }
 
 footer > .row {
@@ -11779,6 +11808,70 @@ button.cta:hover {
           box-shadow: 0 0 0 2px #1283EB;
 }
 
+.diagram .arrow {
+  background-image: url(../../assets/diagram-arrow.svg);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: right;
+  margin: 5px;
+}
+
+@media (min-width: 992px) {
+  .diagram .arrow {
+    margin: 30px;
+  }
+}
+
+.diagram .arrow.left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.diagram img {
+  width: 80px;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .diagram img {
+    width: 186px;
+  }
+}
+
+.diagram-first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.diagram-icon-container {
+  max-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diagram-icon-container p {
+  color: #FEFDFC;
+  margin-bottom: 15px;
+}
+
+.diagram-icon-container p.icon-title {
+  font-weight: bold;
+  color: #1283EB;
+}
+
 body {
   background-color: #191919;
 }
@@ -11842,11 +11935,23 @@ body {
 }
 
 .wrapper section.background-left {
-  background-position: left;
+  background-position: right;
+}
+
+@media (min-width: 992px) {
+  .wrapper section.background-left {
+    background-position: left;
+  }
 }
 
 .wrapper section.background-right {
-  background-position: right;
+  background-position: left;
+}
+
+@media (min-width: 992px) {
+  .wrapper section.background-right {
+    background-position: right;
+  }
 }
 
 .intro {
@@ -11855,16 +11960,28 @@ body {
 
 .intro .cta {
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 992px) {
   .intro .cta {
     margin-bottom: 165px;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
 .community {
   background-image: url("../../assets/background-community.jpg");
+}
+
+.community .row.mb-70 {
+  margin-bottom: 0;
+}
+
+.community h3 {
+  margin-bottom: 0;
 }
 
 .development {
@@ -11908,6 +12025,53 @@ body {
 
 .about .text-bubble {
   position: absolute;
+}
+
+.join {
+  background: linear-gradient(233deg, #1283eb, #191919);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnimation 0s ease infinite;
+  animation: GradientAnimation 0s ease infinite;
+}
+
+.join .background-image-hand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 60%;
+}
+
+@media (min-width: 992px) {
+  .join .background-image-hand {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    max-width: 40%;
+  }
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
 }
 
 section h2 {
