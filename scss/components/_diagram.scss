@@ -1,40 +1,117 @@
-.diagram{
-    .arrow{
-        background-image: url(../../assets/diagram-arrow.svg);
-        background-repeat: no-repeat;
-        background-position: right;
-        flex: 1;
-        margin: 5px;
-        @include min-dt {
-            margin: 30px;
-        }
-        &.left{
-            transform: rotate(180deg);
-        }
+section.slick-active .diagram p{
+    opacity: 1;
+    top: 0;
+}
+.diagram {
+  .arrow {
+    background-image: url(../../assets/diagram-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    //flex: 1;
+    margin: 5px;
+   display: block;
+    @include min-dt {
+      margin: 30px;
     }
-    img{
-        width: 80px;
-        margin: 0;
-         @include min-dt {
-             width: 186px;
-         }
+    &.left {
+      transform: rotate(180deg);
+    }
+    &.down {
+        transform: rotate(90deg);
+      }
+  }
+ /*  img {
+    width: 80px;
+    margin: 0;
+    @include min-dt {
+      width: 186px;
+    }
+  } */
+}
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: max-content max-content max-content max-content;
+ .diagram-icon{
+     justify-self: center;
+ }
+ .diagram-text{
+    color: white;
+    text-align: center;
+    .icon-title {
+        color: $color-blue;
+        font-weight: bold;
     }
 }
-.diagram-first-row{
+  .diagram-developers-icon {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .diagram-developers-text {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .arrow1{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+  }
+  .diagram-coins-icon{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+  .arrow2{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+  }
+  .arrow3{
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+  }
+  .diagram-community-icon {
+    grid-row: 1 / span 1;
+    grid-column: 5 / span 1;
+  }
+  .diagram-community-text {
+    grid-row: 2 / span 1;
+    grid-column: 5 / span 1;
+  }
+  .diagram-sdk-icon {
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+  }
+  .diagram-sdk-text {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+  }
+  .arrow4{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+  }
+  .diagram-game-icon {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .diagram-game-text {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+  }
+  
+}
+/* .diagram-first-row{
     display: flex;
-}
+} */
 .diagram-icon-container {
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p{
-        color: $color-white;
-        margin-bottom: 15px;
-        &.icon-title{
-            font-weight: bold;
-            color: $color-blue;
-        }
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $color-white;
+    margin-bottom: 15px;
+    &.icon-title {
+      font-weight: bold;
+      color: $color-blue;
     }
+  }
 }

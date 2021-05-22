@@ -11808,14 +11808,27 @@ button.cta:hover {
           box-shadow: 0 0 0 2px #1283EB;
 }
 
+section.slick-active .diagram p {
+  opacity: 1;
+  top: 0;
+}
+
+.diagram {
+  /*  img {
+    width: 80px;
+    margin: 0;
+    @include min-dt {
+      width: 186px;
+    }
+  } */
+}
+
 .diagram .arrow {
   background-image: url(../../assets/diagram-arrow.svg);
   background-repeat: no-repeat;
   background-position: right;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin: 5px;
+  display: block;
 }
 
 @media (min-width: 992px) {
@@ -11829,23 +11842,156 @@ button.cta:hover {
           transform: rotate(180deg);
 }
 
-.diagram img {
-  width: 80px;
-  margin: 0;
+.diagram .arrow.down {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-@media (min-width: 992px) {
-  .diagram img {
-    width: 186px;
-  }
+.diagram-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: max-content max-content max-content max-content;
+      grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+      grid-template-rows: max-content max-content max-content max-content;
 }
 
-.diagram-first-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.diagram-grid .diagram-icon {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
+.diagram-grid .diagram-text {
+  color: white;
+  text-align: center;
+}
+
+.diagram-grid .diagram-text .icon-title {
+  color: #1283EB;
+  font-weight: bold;
+}
+
+.diagram-grid .diagram-developers-icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.diagram-grid .diagram-developers-text {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.diagram-grid .arrow1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+}
+
+.diagram-grid .diagram-coins-icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+.diagram-grid .arrow2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+.diagram-grid .arrow3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / span 1;
+}
+
+.diagram-grid .diagram-community-icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / span 1;
+}
+
+.diagram-grid .diagram-community-text {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / span 1;
+}
+
+.diagram-grid .diagram-sdk-icon {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+.diagram-grid .diagram-sdk-text {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+.diagram-grid .arrow4 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+}
+
+.diagram-grid .diagram-game-icon {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.diagram-grid .diagram-game-text {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+/* .diagram-first-row{
+    display: flex;
+} */
 .diagram-icon-container {
   max-width: 250px;
   display: -webkit-box;
