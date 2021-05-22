@@ -70,3 +70,7 @@ page.on('wheel', function (e) {
     }
     /* console.log("end", pageEnd); */
 });
+
+if(window.innerHeight < 768) {
+   // slider.slick('unslick');
+}
