@@ -30,10 +30,10 @@ section.slick-active .diagram p{
 }
 .diagram-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-@include min-dt {
+  
+/* @include min-dt { */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
+/* } */
 //grid-template-rows: max-content max-content max-content max-content;
  .diagram-icon{
      justify-self: center;
@@ -45,102 +45,110 @@ section.slick-active .diagram p{
         color: $color-blue;
         font-weight: bold;
     }
+    .icon-title,
+    .icon-text{
+        font-size: 12px;
+        @include min-dt {
+            font-size: 16px;
+        }
+    }
+
 }
   .diagram-developers-icon {
-    grid-row: 1 / span 1;
+   /*  grid-row: 1 / span 1;
     grid-column: 1 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 1 / span 1;
         grid-column: 1 / span 1;
-    }
+    /* } */
   }
   .diagram-developers-text {
-    grid-row: 2 / span 1;
+   /*  grid-row: 2 / span 1;
     grid-column: 1 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 2 / span 1;
     grid-column: 1 / span 1;
-    }
+  /*   } */
   }
   .arrow1{
-    grid-row: 3 / span 1;
+   /*  grid-row: 3 / span 1;
     grid-column: 1 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    }
+   /*  } */
   }
   .diagram-coins-icon{
-    grid-row: 4 / span 1;
+    /* grid-row: 4 / span 1;
     grid-column: 1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 1 / span 1;
     grid-column: 3 / span 1;
-    }
+    /* } */
   }
   .arrow2{
-    grid-row: 5 / span 1;
+  /*   grid-row: 5 / span 1;
     grid-column: 1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 2 / span 1;
         grid-column: 3 / span 1; 
-    }
+   /*  } */
   }
   .arrow3{
-    grid-row: 3 / span 1;
+   /*  grid-row: 3 / span 1;
     grid-column: 2 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 1 / span 1;
     grid-column: 4 / span 1;
-    }
+    /* } */
   }
   .diagram-community-icon {
-    grid-row: 1 / span 1;
+   /*  grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 1 / span 1;
     grid-column: 5 / span 1;
-    }
+    /* } */
   }
   .diagram-community-text {
-    grid-row: 2 / span 1;
+   /*  grid-row: 2 / span 1;
     grid-column: 2 / span 1;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 2 / span 1;
     grid-column: 5 / span 1;
-    }
+    /* } */
   }
   .diagram-sdk-icon {
-    grid-row: 6 / span 1;
+   /*  grid-row: 6 / span 1;
     grid-column: 1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 3 / span 1;
     grid-column: 3 / span 1;
-    }
+   /*  } */
   }
   .diagram-sdk-text {
-    grid-row: 7 / span 1;
+   /*  grid-row: 7 / span 1;
     grid-column:1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 4 / span 1;
         grid-column: 3 / span 1;
-    }
+   /*  } */
   }
   .arrow4{
-    grid-row: 8 / span 1;
+   /*  grid-row: 8 / span 1;
     grid-column: 1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 3 / span 1;
         grid-column: 2 / span 1;
-    }
+    /* } */
   }
   .diagram-game-icon {
-    grid-row: 9 / span 1;
+   /*  grid-row: 9 / span 1;
     grid-column: 1 / span 2;
-    @include min-dt {
+    @include min-dt { */
         grid-row: 3 / span 1;
     grid-column: 1 / span 1;
-    }
+   /*  } */
   }
   .diagram-game-text {
     grid-row: 4 / span 1;
@@ -168,4 +176,16 @@ section.slick-active .diagram p{
       color: $color-blue;
     }
   }
+}
+
+@media (max-width: 767px){
+    .diagram-text,
+.diagram-icon,
+.arrow{
+ max-width: 100%;
+    margin: 0;
+}
+.arrow{
+    background-size:200px;
+}
 }

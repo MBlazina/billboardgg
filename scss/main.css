@@ -11581,7 +11581,7 @@ body {
 }
 
 .wrapper {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   top: 0;
   margin: 0 auto;
@@ -11590,13 +11590,14 @@ body {
 
 .slick section {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  position: relative;
   position: relative;
 }
 
 .slick-vertical .slick-slide {
   border: none;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 section {
@@ -11609,7 +11610,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
 }
 
 section > .container-fluid {
@@ -11850,15 +11850,10 @@ section.slick-active .diagram p {
 .diagram-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
+  /* @include min-dt { */
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* } */
 }
 
 .diagram-grid .diagram-icon {
@@ -11876,244 +11871,172 @@ section.slick-active .diagram p {
   font-weight: bold;
 }
 
+.diagram-grid .diagram-text .icon-title,
+.diagram-grid .diagram-text .icon-text {
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  .diagram-grid .diagram-text .icon-title,
+  .diagram-grid .diagram-text .icon-text {
+    font-size: 16px;
+  }
+}
+
 .diagram-grid .diagram-developers-icon {
+  /*  grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / span 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / span 1;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-developers-icon {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-  }
+  /* } */
 }
 
 .diagram-grid .diagram-developers-text {
+  /*  grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / span 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / span 1;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-developers-text {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / span 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-  }
+  /*   } */
 }
 
 .diagram-grid .arrow1 {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .arrow1 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / span 1;
-  }
-}
-
-.diagram-grid .diagram-coins-icon {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-coins-icon {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / span 1;
-  }
-}
-
-.diagram-grid .arrow2 {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  grid-row: 5 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .arrow2 {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / span 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / span 1;
-  }
-}
-
-.diagram-grid .arrow3 {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / span 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / span 1;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .arrow3 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-    grid-column: 4 / span 1;
-  }
-}
-
-.diagram-grid .diagram-community-icon {
+  /*  grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / span 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / span 1;
+  /*  } */
 }
 
-@media (min-width: 992px) {
-  .diagram-grid .diagram-community-icon {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / span 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-    grid-column: 5 / span 1;
-  }
+.diagram-grid .diagram-coins-icon {
+  /* grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  /* } */
 }
 
-.diagram-grid .diagram-community-text {
+.diagram-grid .arrow2 {
+  /*   grid-row: 5 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / span 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   -ms-grid-column-span: 1;
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
+  /*  } */
 }
 
-@media (min-width: 992px) {
-  .diagram-grid .diagram-community-text {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / span 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 1;
-    grid-column: 5 / span 1;
-  }
+.diagram-grid .arrow3 {
+  /*  grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / span 1;
+  /* } */
+}
+
+.diagram-grid .diagram-community-icon {
+  /*  grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / span 1;
+  /* } */
+}
+
+.diagram-grid .diagram-community-text {
+  /*  grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / span 1;
+  /* } */
 }
 
 .diagram-grid .diagram-sdk-icon {
-  -ms-grid-row: 6;
+  /*  grid-row: 6 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+  -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  grid-row: 6 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-sdk-icon {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3 / span 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / span 1;
-  }
+  grid-row: 3 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  /*  } */
 }
 
 .diagram-grid .diagram-sdk-text {
-  -ms-grid-row: 7;
+  /*  grid-row: 7 / span 1;
+    grid-column:1 / span 2;
+    @include min-dt { */
+  -ms-grid-row: 4;
   -ms-grid-row-span: 1;
-  grid-row: 7 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-sdk-text {
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    grid-row: 4 / span 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / span 1;
-  }
+  grid-row: 4 / span 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  /*  } */
 }
 
 .diagram-grid .arrow4 {
-  -ms-grid-row: 8;
+  /*  grid-row: 8 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+  -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  grid-row: 8 / span 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .arrow4 {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3 / span 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / span 1;
-  }
+  grid-row: 3 / span 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  /* } */
 }
 
 .diagram-grid .diagram-game-icon {
-  -ms-grid-row: 9;
+  /*  grid-row: 9 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+  -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  grid-row: 9 / span 1;
+  grid-row: 3 / span 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-
-@media (min-width: 992px) {
-  .diagram-grid .diagram-game-icon {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3 / span 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-  }
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  /*  } */
 }
 
 .diagram-grid .diagram-game-text {
@@ -12153,6 +12076,18 @@ section.slick-active .diagram p {
 .diagram-icon-container p.icon-title {
   font-weight: bold;
   color: #1283EB;
+}
+
+@media (max-width: 767px) {
+  .diagram-text,
+  .diagram-icon,
+  .arrow {
+    max-width: 100%;
+    margin: 0;
+  }
+  .arrow {
+    background-size: 200px;
+  }
 }
 
 body {
