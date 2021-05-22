@@ -1,8 +1,9 @@
 .diagram{
     .arrow{
         background-image: url(../../assets/diagram-arrow.svg);
-        flex: 1;
+        background-repeat: no-repeat;
         background-position: right;
+        flex: 1;
         margin: 5px;
         @include min-dt {
             margin: 30px;

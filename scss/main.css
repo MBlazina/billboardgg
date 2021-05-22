@@ -11810,10 +11810,11 @@ button.cta:hover {
 
 .diagram .arrow {
   background-image: url(../../assets/diagram-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-position: right;
   margin: 5px;
 }
 
