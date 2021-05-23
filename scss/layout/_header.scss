@@ -23,8 +23,12 @@ header {
         justify-content: space-between;
         align-items: center;
     }
-    
+    .logo{
+        margin-right: auto;
+        margin-left: 0;
+    }
 }
+
 .logo{
     cursor: pointer;
     height: 90px;

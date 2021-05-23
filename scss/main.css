@@ -11689,6 +11689,11 @@ header .row {
           align-items: center;
 }
 
+header .logo {
+  margin-right: auto;
+  margin-left: 0;
+}
+
 .logo {
   cursor: pointer;
   height: 90px;
