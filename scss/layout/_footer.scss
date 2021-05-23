@@ -23,6 +23,10 @@ footer {
         width: 100%;
         li {
             padding: 0 20px;
+            margin-bottom: 10px;
+            @include min-dt {
+                margin-bottom: 0;
+            }
         }
         li > a{
             color: $color-white;
