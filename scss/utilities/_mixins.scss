@@ -15,7 +15,14 @@
 }
 
 // custom mixins
+$break-tb-min: 768px;
 $break-dt-min: 992px;
+
+@mixin min-tb {
+    @media (min-width: $break-tb-min) {
+        @content;
+    }
+}
 
 @mixin min-dt {
     @media (min-width: $break-dt-min) {

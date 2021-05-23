@@ -12,12 +12,21 @@ header {
     }
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
     &.closed{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: rgba($color: $color-black, $alpha: 0.8);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba($color: $color-black, $alpha: 0.2);
+        .logo {
+            height: 40px;
+        }
     }
     .row{
         justify-content: space-between;
         align-items: center;
     }
+    
+}
+.logo{
+    cursor: pointer;
+    height: 90px;
+    transition: height 0.2s ease-in-out;
 }

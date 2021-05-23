@@ -30,14 +30,19 @@ section.slick-active .diagram p{
 }
 .diagram-grid {
   display: grid;
-
-/* @include min-dt { */
+  grid-template-columns: 70px 50px 70px 50px 70px ;
+  justify-content: center;
+@include min-tb {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-/* } */
+}
 //grid-template-rows: max-content max-content max-content max-content;
  .diagram-icon{
      justify-self: center;
      margin-bottom: 15px;
+     width: 70px;
+     @include min-tb {
+         width: 186px;
+     }
  }
  .diagram-text{
     max-width: 250px;
@@ -66,12 +71,14 @@ section.slick-active .diagram p{
     /* } */
   }
   .diagram-developers-text {
-   /*  grid-row: 2 / span 1;
-    grid-column: 1 / span 1;
-    @include min-dt { */
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    text-align: left;
+    @include min-tb {
+        text-align: center;
         grid-row: 2 / span 1;
     grid-column: 1 / span 1;
-  /*   } */
+    }
   }
   .arrow1{
    /*  grid-row: 3 / span 1;
@@ -100,7 +107,6 @@ section.slick-active .diagram p{
         width: 100px;
     justify-self: center;
         @include min-dt {
-           
         }
    /*  } */
   }
@@ -121,12 +127,14 @@ section.slick-active .diagram p{
     /* } */
   }
   .diagram-community-text {
-   /*  grid-row: 2 / span 1;
-    grid-column: 2 / span 1;
-    @include min-dt { */
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 2;
+    text-align: right;
+    @include min-tb { 
+        text-align: center;
         grid-row: 2 / span 1;
     grid-column: 5 / span 1;
-    /* } */
+     } 
   }
   .diagram-sdk-icon {
    /*  grid-row: 6 / span 1;
@@ -137,12 +145,14 @@ section.slick-active .diagram p{
    /*  } */
   }
   .diagram-sdk-text {
-   /*  grid-row: 7 / span 1;
-    grid-column:1 / span 2;
-    @include min-dt { */
+    grid-row: 4 / span 1;
+        grid-column: 3 / span 2;
+        text-align: left;
+    @include min-tb { 
+        text-align: center;
         grid-row: 4 / span 1;
         grid-column: 3 / span 1;
-   /*  } */
+     } 
   }
   .arrow4{
    /*  grid-row: 8 / span 1;
