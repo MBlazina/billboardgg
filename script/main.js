@@ -39,7 +39,7 @@ slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
         pageEnd = false;
         page.animate({ "top": "0px" }, "normal");
     }
-    if(currentSlide == 1){
+    if(currentSlide > 0){
         header.classList.add('closed')
     }else if(currentSlide == 0){
         header.classList.remove('closed')
@@ -70,3 +70,7 @@ page.on('wheel', function (e) {
     }
     /* console.log("end", pageEnd); */
 });
+
+if(window.innerHeight < 768) {
+   // slider.slick('unslick');
+}

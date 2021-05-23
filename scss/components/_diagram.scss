@@ -1,40 +1,193 @@
-.diagram{
-    .arrow{
-        background-image: url(../../assets/diagram-arrow.svg);
-        background-repeat: no-repeat;
-        background-position: right;
-        flex: 1;
-        margin: 5px;
-        @include min-dt {
-            margin: 30px;
-        }
-        &.left{
-            transform: rotate(180deg);
-        }
-    }
-    img{
-        width: 80px;
-        margin: 0;
-         @include min-dt {
-             width: 186px;
-         }
-    }
+section.slick-active .diagram p{
+    opacity: 1;
+    top: 0;
 }
-.diagram-first-row{
-    display: flex;
+.diagram {
+  .arrow {
+    background-image: url(../../assets/diagram-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    //flex: 1;
+    margin: 5px;
+   display: block;
+    @include min-dt {
+      margin: 30px;
+    }
+    &.left {
+      transform: rotate(180deg);
+    }
+    &.down {
+        transform: rotate(90deg);
+      }
+  }
+ /*  img {
+    width: 80px;
+    margin: 0;
+    @include min-dt {
+      width: 186px;
+    }
+  } */
 }
-.diagram-icon-container {
+.diagram-grid {
+  display: grid;
+
+/* @include min-dt { */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+/* } */
+//grid-template-rows: max-content max-content max-content max-content;
+ .diagram-icon{
+     justify-self: center;
+ }
+ .diagram-text{
     max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p{
-        color: $color-white;
-        margin-bottom: 15px;
-        &.icon-title{
-            font-weight: bold;
-            color: $color-blue;
+    justify-self: center;
+    color: white;
+    text-align: center;
+    .icon-title {
+        color: $color-blue;
+        font-weight: bold;
+    }
+    .icon-title,
+    .icon-text{
+        font-size: 12px;
+        @include min-dt {
+            font-size: 16px;
         }
     }
+
+}
+  .diagram-developers-icon {
+   /*  grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    /* } */
+  }
+  .diagram-developers-text {
+   /*  grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
+        grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  /*   } */
+  }
+  .arrow1{
+   /*  grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt { */
+        grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+   /*  } */
+  }
+  .diagram-coins-icon{
+    /* grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+        grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    /* } */
+  }
+  .arrow2{
+  /*   grid-row: 5 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+        grid-row: 2 / span 1;
+        grid-column: 3 / span 1; 
+   /*  } */
+  }
+  .arrow3{
+   /*  grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+        grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+    /* } */
+  }
+  .diagram-community-icon {
+   /*  grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+        grid-row: 1 / span 1;
+    grid-column: 5 / span 1;
+    /* } */
+  }
+  .diagram-community-text {
+   /*  grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    @include min-dt { */
+        grid-row: 2 / span 1;
+    grid-column: 5 / span 1;
+    /* } */
+  }
+  .diagram-sdk-icon {
+   /*  grid-row: 6 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+        grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+   /*  } */
+  }
+  .diagram-sdk-text {
+   /*  grid-row: 7 / span 1;
+    grid-column:1 / span 2;
+    @include min-dt { */
+        grid-row: 4 / span 1;
+        grid-column: 3 / span 1;
+   /*  } */
+  }
+  .arrow4{
+   /*  grid-row: 8 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+        grid-row: 3 / span 1;
+        grid-column: 2 / span 1;
+    /* } */
+  }
+  .diagram-game-icon {
+   /*  grid-row: 9 / span 1;
+    grid-column: 1 / span 2;
+    @include min-dt { */
+        grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+   /*  } */
+  }
+  .diagram-game-text {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+    @include min-dt {
+        
+    }
+  }
+  
+}
+/* .diagram-first-row{
+    display: flex;
+} */
+.diagram-icon-container {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $color-white;
+    margin-bottom: 15px;
+    &.icon-title {
+      font-weight: bold;
+      color: $color-blue;
+    }
+  }
+}
+
+@media (max-width: 767px){
+    .diagram-text,
+.diagram-icon,
+.arrow{
+ max-width: 100%;
+    margin: 0;
+}
+.arrow{
+    background-size:200px;
+}
 }
