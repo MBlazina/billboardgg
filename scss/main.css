@@ -12271,6 +12271,12 @@ body {
   margin-bottom: 0;
 }
 
+@media (min-width: 992px) {
+  .community .row.mb-70 {
+    margin-bottom: 40px;
+  }
+}
+
 .community h3 {
   margin-bottom: 0;
 }
