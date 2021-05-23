@@ -37,6 +37,7 @@ section.slick-active .diagram p{
 //grid-template-rows: max-content max-content max-content max-content;
  .diagram-icon{
      justify-self: center;
+     margin-bottom: 15px;
  }
  .diagram-text{
     max-width: 250px;
@@ -86,6 +87,7 @@ section.slick-active .diagram p{
     @include min-dt { */
         grid-row: 1 / span 1;
     grid-column: 3 / span 1;
+    z-index: 2;
     /* } */
   }
   .arrow2{
@@ -93,7 +95,13 @@ section.slick-active .diagram p{
     grid-column: 1 / span 2;
     @include min-dt { */
         grid-row: 2 / span 1;
-        grid-column: 3 / span 1; 
+        grid-column: 3 / span 1;
+        z-index: 1;
+        width: 100px;
+    justify-self: center;
+        @include min-dt {
+           
+        }
    /*  } */
   }
   .arrow3{

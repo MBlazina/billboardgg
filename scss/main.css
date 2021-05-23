@@ -11859,6 +11859,7 @@ section.slick-active .diagram p {
 .diagram-grid .diagram-icon {
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-bottom: 15px;
 }
 
 .diagram-grid .diagram-text {
@@ -11935,6 +11936,7 @@ section.slick-active .diagram p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / span 1;
+  z-index: 2;
   /* } */
 }
 
@@ -11948,6 +11950,10 @@ section.slick-active .diagram p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / span 1;
+  z-index: 1;
+  width: 100px;
+  -ms-grid-column-align: center;
+      justify-self: center;
   /*  } */
 }
 
