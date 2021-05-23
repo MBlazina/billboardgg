@@ -11862,6 +11862,9 @@ section.slick-active .diagram p {
 }
 
 .diagram-grid .diagram-text {
+  max-width: 250px;
+  -ms-grid-column-align: center;
+      justify-self: center;
   color: white;
   text-align: center;
 }

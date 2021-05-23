@@ -30,7 +30,7 @@ section.slick-active .diagram p{
 }
 .diagram-grid {
   display: grid;
-  
+
 /* @include min-dt { */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 /* } */
@@ -39,6 +39,8 @@ section.slick-active .diagram p{
      justify-self: center;
  }
  .diagram-text{
+    max-width: 250px;
+    justify-self: center;
     color: white;
     text-align: center;
     .icon-title {
