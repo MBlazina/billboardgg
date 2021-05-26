@@ -2,7 +2,8 @@
 @import 'utilities/functions';
 @import 'utilities/mixins';
 
-@import 'vendors/bootstrap-full';
+/* @import 'vendors/bootstrap-full'; */
+@import 'vendors/bootstrap-uncss';
 @import 'vendors/slick';
 
 @import 'base/reset';
