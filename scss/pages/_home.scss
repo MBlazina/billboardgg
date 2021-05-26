@@ -81,40 +81,35 @@ body{
 }
 .about{
     h2{
+        margin-bottom: 0;
         text-align: center;
+    }
+    .about-infographic{
+        position: relative;
     }
     .infographic-container{
         position: relative;
         .text-bubble{
             &.sell{
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
+                
             }
             &.virtual{
-                top: 5%;
-                left: 15%
+                
             }
             &.transparent{
-                bottom: 0;
-                left: 15%
+               
             }
             &.sdk{
-                right: 0;
-                bottom: 0;
+               
             }
             &.auction{
-                top: 20%;
-                right: 5%;
+                
             }
         }
     }
-    .text-bubble {
-        position: absolute;
-    }
+
 }
 .join {
-   
     .background-image-hand{
         position: absolute;
        bottom: 0;

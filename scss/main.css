@@ -11587,14 +11587,14 @@ body {
   max-width: 4096px;
 }
 
-.slick section {
+.slick.page-slider section {
   width: 100%;
   height: 100%;
   position: relative;
   position: relative;
 }
 
-.slick-vertical .slick-slide {
+.slick-vertical.page-slider section.slick-slide {
   border: none;
   height: 100vh;
 }
@@ -11762,6 +11762,122 @@ footer .footer-nav li > a:hover {
   user-select: text;
 }
 
+.infographic-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .infographic-container {
+    display: block;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .infographic-container > .slick-list {
+    overflow: visible;
+  }
+  .infographic-container .text-bubble {
+    position: absolute;
+  }
+  .infographic-container .text-bubble.sell {
+    left: 0px;
+  }
+  .infographic-container .text-bubble.virtual {
+    left: 0;
+    -webkit-transform: translate(200px, -210px);
+            transform: translate(200px, -210px);
+  }
+  .infographic-container .text-bubble.transparent {
+    left: 0;
+    -webkit-transform: translate(200px, 240px);
+            transform: translate(200px, 240px);
+  }
+  .infographic-container .text-bubble.sdk {
+    right: 0;
+    -webkit-transform: translate(-50px, 210px);
+            transform: translate(-50px, 210px);
+  }
+  .infographic-container .text-bubble.auction {
+    right: 0;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50px, -120px);
+            transform: translate(-50px, -120px);
+  }
+}
+
+.infographic-container .infographic-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.infographic-container .text-bubble br {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .infographic-container .text-bubble br {
+    display: block;
+  }
+}
+
+.infographic-container .slick-prev,
+.infographic-container .slick-next {
+  width: 20px;
+  height: 20px;
+  display: block;
+  font-size: 0;
+  min-width: 30px;
+  background: none;
+  border: none;
+  background: url("../assets/chevron-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.infographic-container .slick-prev {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.infographic-container .slick-next {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* .infographic-nav{
+    display: flex;
+    justify-content: center;
+    .infographic-prev,
+    .infographic-next{
+        width: 30px;
+        height: 30px;
+        margin: 30px;
+        content:url(../assets/chevron-black.svg);
+    }
+    .infographic-prev{
+        transform: rotate(-90deg);
+    }
+    .infographic-next{
+        transform: rotate(90deg);
+    }
+} */
 a.cta,
 button.cta {
   cursor: pointer;
@@ -12286,42 +12402,16 @@ body {
 }
 
 .about h2 {
+  margin-bottom: 0;
   text-align: center;
+}
+
+.about .about-infographic {
+  position: relative;
 }
 
 .about .infographic-container {
   position: relative;
-}
-
-.about .infographic-container .text-bubble.sell {
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.about .infographic-container .text-bubble.virtual {
-  top: 5%;
-  left: 15%;
-}
-
-.about .infographic-container .text-bubble.transparent {
-  bottom: 0;
-  left: 15%;
-}
-
-.about .infographic-container .text-bubble.sdk {
-  right: 0;
-  bottom: 0;
-}
-
-.about .infographic-container .text-bubble.auction {
-  top: 20%;
-  right: 5%;
-}
-
-.about .text-bubble {
-  position: absolute;
 }
 
 .join {

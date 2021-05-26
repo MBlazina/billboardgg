@@ -1,7 +1,9 @@
 let page = $(".wrapper");
-let slider = $(".slick");
+const slider = $(".slick.page-slider");
 let pageEnd = false;
 const nav = document.querySelector("nav");
+
+/* PAGE SLIDER INIT */
 slider.slick({
   vertical: true,
   verticalSwiping: true,
@@ -22,6 +24,7 @@ slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
 
 slider.on("afterChange", function (event, slick, currentSlide, nextSlide) {
   /* console.log(currentSlide); */
+  event.stopPropagation();
   if (slick.$slides[currentSlide].classList.contains("nav-black")) {
     if (!nav.classList.contains("nav-black")) {
       nav.classList.add("nav-black");
@@ -70,9 +73,31 @@ page.on("wheel", function (e) {
   /* console.log("end", pageEnd); */
 });
 
+/* LOGO LISTENER GOTO FIRST SLIDE */
 const logo = document.querySelectorAll(".logo");
 for (let i = 0; i < logo.length; i++) {
   logo[i].addEventListener("click", function () {
     slider.slick("slickGoTo", 0);
   });
 }
+
+/* INFOGRAPHIC SLIDER INIT */
+
+const infographic = $('.infographic-container');
+const infoSlides = document.querySelectorAll('.infographic-container .infographic-slide').length;
+console.log(infoSlides)
+infographic.slick({
+ /*  adaptiveHeight: true, */
+  /* prevArrow: $('.infographic-prev'),
+  nextArrow: $('.infographic-next'), */
+  slidesToShow: infoSlides,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+})
+infographic.on('afterChange', (event) => { event.stopPropagation() });

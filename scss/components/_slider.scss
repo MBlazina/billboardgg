@@ -1,7 +1,99 @@
 /* CUSTOM SLICK */
 .slick-slider {
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
+
+.infographic-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  @media (min-width: 1200px) {
+      display: block;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    transform: translate(-50%, -50%);
+    >.slick-list {
+        overflow: visible;
+    }
+    .text-bubble {
+        position: absolute;
+        &.sell {
+            left: 0px;
+        }
+        &.virtual {
+            left: 0;
+            transform: translate(200px, -210px);
+        }
+        &.transparent {
+            left: 0;
+            transform: translate(200px, 240px);
+        }
+        &.sdk {
+            right: 0;
+            transform: translate(-50px, 210px);
+        }
+        &.auction {
+            right: 0;
+            transform-origin: bottom;
+            transform: translate(-50px, -120px);
+        }
+
+    }
+  }
+  .infographic-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-bubble {
+    br {
+      display: none;
+      @include min-dt {
+        display: block;
+      }
+    }
+  }
+  .slick-prev,
+    .slick-next {
+        width: 20px;
+        height: 20px;
+        display: block;
+        font-size: 0;
+        min-width: 30px;
+        background: none;
+        border: none;
+        background: url("../assets/chevron-black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slick-prev {
+        transform: rotate(-90deg);
+
+    }
+    .slick-next {
+        transform: rotate(90deg);
+
+    }
+}
+/* .infographic-nav{
+    display: flex;
+    justify-content: center;
+    .infographic-prev,
+    .infographic-next{
+        width: 30px;
+        height: 30px;
+        margin: 30px;
+        content:url(../assets/chevron-black.svg);
+    }
+    .infographic-prev{
+        transform: rotate(-90deg);
+    }
+    .infographic-next{
+        transform: rotate(90deg);
+    }
+} */
